@@ -1,3 +1,9 @@
+Noob Bundle. But making use of github and packagist to reuse my own bundles. one day I might write something more usefull for the community.
+
+Forgive my lack of knowledge of .md format.
+
+Installation:
+
 1. Follow readme for imag/ldap bundle, with the following things:
 
 1. Download with composer -> do the same also with this bundle
