@@ -6,14 +6,14 @@ Installation:
 
 1. Follow readme for imag/ldap bundle, with the following things:
 
-1. Download with composer -> do the same also with this bundle
-3. Enable the Bundle -> do the same for this bundle
-4. Configure LdapBundle security.yml -> in WebAuthBundle/Resources/Docs/security.yml you will find an example
-7. Import LdapBundle routing -> DON'T DO THAT
---from here down you don't have to follow it
-8. Implement Logout ->it depends on use case, but if you have users logged in with webauth, you wont let them logout!
-9. Use chain provider -
-10. Subscribe to PRE_BIND event
+ Download with composer -> do the same also with this bundle
+ Enable the Bundle -> do the same for this bundle
+ Configure LdapBundle security.yml -> in WebAuthBundle/Resources/Docs/security.yml you will find an example
+ Import LdapBundle routing -> DON'T DO THAT
+ --from here down you don't have to follow it
+ Implement Logout ->it depends on use case, but if you have users logged in with webauth, you wont let them logout!
+ Use chain provider -
+ Subscribe to PRE_BIND event
 
 
 2. Import WebAuthBundle routing:
