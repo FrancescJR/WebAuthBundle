@@ -13,7 +13,7 @@
 
     "require": {
         "php":                      ">=5.3.3",
-        "imag/ldap-bundle": "dev-master",
+        "imag/ldap-bundle": "dev-master"
     },
 
     "minimum-stability": "dev",   
