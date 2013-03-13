@@ -1,0 +1,7 @@
+login:
+  pattern:              /login
+  defaults:             { _controller: OISTWebAuthBundle:Default:authent }
+  
+bouncing:
+  pattern:              /bounced
+  defaults:             { _controller: OISTWebAuthBundle:Default:bounce }

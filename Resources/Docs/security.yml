@@ -1,0 +1,52 @@
+jms_security_extra:
+    secure_all_services: false
+    expressions: true
+
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            anonymous:        ~
+
+            imag_ldap:
+                intention: authenticate
+                check_path: login_check
+                login_path: login
+                csrf_provider: form.csrf_provider
+                provider: ldap
+    providers:
+        ldap:
+            id: imag_ldap.security.user.provider
+            
+    access_control:
+        - { path: ^/login,          roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/,               roles: IS_AUTHENTICATED_FULLY }
+        
+imag_ldap:
+    client:
+        host: host
+        port: 389
+        version: 3
+        username: cn=xxx,ou=xxx,dc=domainname,dc=jp
+        password: password
+#        network_timeout: 10
+#        referrals_enabled: false
+#        bind_username_before: false
+#        skip_roles: ~
+
+    user:
+        base_dn: ou=people,dc=domainanme,dc=jp
+#    filter: (&(foo=bar)(ObjectClass=Person)) #Optional
+        name_attribute: uid
+#    attributes:
+
+    role:
+        base_dn: ou=groups,dc=domainame,dc=jp
+#    filter: null #Optional
+        name_attribute: cn
+        user_attribute: Member
+#    user_id: [ dn or username ] #Default dn
+        

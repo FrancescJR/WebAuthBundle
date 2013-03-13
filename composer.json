@@ -1,0 +1,22 @@
+{
+    "name":        "oist/webauth",
+    "type":        "symfony-bundle",
+    "description": "This will automatically authenticate the user if it had a previous authentication through webauth",
+    "keywords":    ["webauth", "ldap", "symfony", "bundle"],
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name": "Francesc Travesa",
+        }
+    ],
+
+    "require": {
+        "php":                      ">=5.3.3",
+        "imag/ldap-bundle": "dev-master",
+    },
+
+    "minimum-stability": "dev",   
+
+    "target-dir": "Cg/KintBundle"
+}
