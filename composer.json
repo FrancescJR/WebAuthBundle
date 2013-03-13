@@ -16,5 +16,5 @@
         "imag/ldap-bundle": "dev-master"
     },
 
-    "minimum-stability": "dev",   
+    "minimum-stability": "dev" 
 }
