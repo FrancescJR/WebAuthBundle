@@ -15,6 +15,9 @@
         "php":                      ">=5.3.3",
         "imag/ldap-bundle": "dev-master"
     },
+    "autoload": {
+        "psr-0": { "OIST\\WebAuthBundle": "" }
+    },
 
     "minimum-stability": "dev" 
 }
