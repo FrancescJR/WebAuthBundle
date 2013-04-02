@@ -54,6 +54,7 @@ class DefaultController extends Controller
     	//I need that to have easy access to the user
     	$this->get('session')->set('CurrentUser',$theLdapManagerUser);
 
+	return $this->redirect($this->generateUrl('_homeafterlogin'));
     	return $this->render('OISTWebAuthBundle:Default:index.html.twig', array(
     			'roles' => $roles,
     			'dn'=>$dn    			
