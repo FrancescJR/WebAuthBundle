@@ -20,7 +20,9 @@ Installation:
 oist_webauth:
   resource: "@OISTWebAuthBundle/Resources/config/routing.yml"
 
-3. Set the name of your firewall that will require webauth:
+3.I am lazy to make it through the config, so just add a route called _homeafterlogin in your routing!!
+
+4. Set the name of your firewall that will require webauth:
 #app/config/config.yml
 oist_web_auth:
     firewall_name: secured_area
@@ -28,7 +30,7 @@ oist_web_auth:
 by default it is: secured_area, change accordingly your security.yml file.
 
 
-4. Set Symfony to not override session values from main $_SESSION variable in php. As we need that to get the already identified user.
+5. Set Symfony to not override session values from main $_SESSION variable in php. As we need that to get the already identified user.
 #app/config/config.yml
 framework:
     session:

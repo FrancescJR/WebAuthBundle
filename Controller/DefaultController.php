@@ -33,11 +33,15 @@ class DefaultController extends Controller
     	if($serverparams->has('WEBAUTH_USER')){
     		$currentid=$serverparams->get('WEBAUTH_USER');
     	}
+    	if($serverparams->has('REDIRECT_WEBAUTH_USER')){
+    		$currentid=$serverparams->get('REDIRECT_WEBAUTH_USER');
+    	}
 
     	//It takes a manual change of url to set the webauth variables, lets redirect to the same action until it gets the session variables from webauth    	
     	if(!$currentid){
     		return $this->redirect($this->generateUrl('bouncing'));
     	}
+    	
     	
     	$theLdapManagerUser = $this->container->get('imag_ldap.ldap_manager');
 
